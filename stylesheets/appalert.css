@@ -1,0 +1,39 @@
+.__appOverlay {
+position:fixed;
+top:0;
+left:0;
+background:rgba(85, 85, 85, 0.3);
+display:none; z-index:10000;
+}
+.__appOuter {
+background:url(../../../../graphics/black-trans-65.png) top left repeat; border:0; position:absolute;  z-index:11000; position:fixed;
+display:none; padding:10px;
+-moz-border-radius: 10px; 
+-webkit-border-radius: 10px; 
+border-radius: 10px; 
+}
+
+.__appInner {
+padding:10px;
+color:#333; background:#fff;  min-width:200px; min-height:100px; max-width:900px; line-height:17px;
+}
+.__appInner h2 { font-size:18px; font-weight:normal; margin:0 0 15px 0; padding:0 0 5px 0; border-bottom:1px solid #e5e5e5; }
+
+.__appInner .__appButtons { margin:15px 0 0 0; text-align:center; }
+
+.__appInner button { display:inline-block !important; padding:7px 10px !important; background:#000; color:#fff !important; text-transform:uppercase; font-weight:bold; border:0; outline:none; cursor:pointer; 
+-moz-border-radius: 5px; 
+-webkit-border-radius: 5px; 
+border-radius: 5px; 
+}
+
+.__appInner button:hover { background:#333; color:#f0f0f0; }
+
+.__appInput { margin:5px 0; }
+.__appInput input { width:90%; padding:3%; border:1px solid #e5e5e5; color:#333; font-size:12px; font-weight:bold; outline:none; 
+-moz-border-radius: 5px; 
+-webkit-border-radius: 5px; 
+border-radius: 5px; 
+}
+
+.__appTextbox {}

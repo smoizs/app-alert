@@ -31,17 +31,41 @@
       <h3>A light weight jQuery Modal dialog plugin. Only 3.7 KB minified!</h3>
 		<p>The plugin was created as part of an application and was built to serve the purpose of creating alerts, notifications, prompts and confirmations. A light weight plugin, App Alert has a bunch of options to configure and supports tracking of alerts via cookies.</p>
 		<p>As an added bonus, we've included a quick solution on how to override the default alert() function of javascript.</p>
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+
+<h2>1. Install</h2>
+<p>The plugin is jQuery plugin, hence it is dependent on the jquery library. This version of App Alert has been tested with jQuery 1.7.2 - you can get the latest version of jQuery from <a href="http://www.jquery.com">jquery.com</a>. Include the jQuery library before adding this plugin</p>
+<pre>
+	<code style="font-size:10px;">
+    	&lt;script src="//code.jquery.com/jquery-1.7.2.min.js"&gt;&lt;/script&gt;
+        &lt;script src="/js/jquery.appAlert-1.0.min.js"&gt;&lt;/script&gt;
+	</code>
+</pre>
+<p>Also, it is recommended that you include the stylesheet provided with the plugin. You can modify and customize the stylesheet as per your design requirements.</p>
+<pre>
+	<code style="font-size:10px;">
+    	&lt;link rel="stylesheet" href="css/appalert.css"&gt;
+	</code>
+</pre>
+
+<h2>2. The Markup</h2>
+<p>App Alert does not require the content of the dialog to be HTML. You can pass a string as the message of the dialog. That does not mean that HTML can't be included!</p>
+<p>You can send HTML as a parameter to App Alert or a DOM element can be used as the content for the dialog.</p>
 
 <h3>About the author</h3>
 <p>A web enthusiast interested in creative and prowess web development. I'm a big fan of social media and have a passion for all things tech. I work with Blue Beetle, an innovative and creative boutique studio in Dubai, United Arab Emirates, as the Technical Lead.</p>
 <p>You can follow me on GitHub - <a href="https://github.com/smoizs" class="user-mention">@smoizs</a> or on Twitter - <a href="http://twitter.com/smoizs">@smoizs</a></p>
+<h3>2.1 Example with string</h3>
+<pre>
+	<code style="font-size:10px;">
+    	$(function() {
+        	$.appalert({'message':'Sample content for dialog here'});
+        });
+	</code>
+</pre>
+
+
 
 <h3>Support or Contact</h3>
-
 <p>Having trouble with the plugin? Submit an issue today or drop me a tweet at <a href="http://twitter.com/smoizs">http://twitter.com/smoizs</a></p>
       </section>
       <footer>

@@ -88,6 +88,40 @@
     });
 	</code>
 </pre>
+<h2>3. Now for some fun!</h2>
+<p>There are a bunch of configurations that can be used to setup the App Alert dialog to be cooler! The configurations below are the complete set of parameters that can be used with App Alert.</p>
+<pre>
+	<code>
+    &lt;div id="sample-container"&gt;
+    	This is a sample message to be displayed 
+        in the modal dialog 
+    &lt;/div&gt;
+    
+    $(function() {
+       	$('#sample-container').appalert({
+        	confirm : true  <span>// converts to a confirm box, adds Ok and Cancel buttons</span>
+            input : true    <span>// converts the modal dialog to a prompt box</span>
+            input_placeholder : 'enter your name' <span>// label for input of prompt</span>
+            animate : true  <span>// add a animated effect of dropping down</span>
+            animateSpeed : 'normal' <span>//normal, fast, slow or a micro second value</span>
+            textOk : 'Ok'   <span>//text for OK button</span>
+            textCancel : 'Cancel' <span>// text for cancel button.</span>
+            overlay : true <span>// add a overlay behind the modal</span>
+            applybuttons : true <span>// allow button, if false, no button and timeout can be used.</span>
+            timeout : 5000 <span>// only applicable if applybuttons is false.</span>
+            width : 0 <span>// 0 = auto, or you can include a pixel value</span>
+            onSuccess : function() {
+            	<span>
+                // callback function to return TRUE or FALSE
+                // TRUE = ok button was clicked
+                // FALSE = cancel button was clicked
+                </span>
+            }
+        });
+    });
+	</code>
+</pre>
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <h3>About the author</h3>

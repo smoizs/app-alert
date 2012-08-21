@@ -60,7 +60,7 @@
 	</code>
 </pre>
 <h3>2.2 Example with HTML</h3>
-<p>You can include a HTML as the message of the dialog.</p>
+<p>You can include a HTML as the message of the dialog. <a href="#" id="example2" class="button"><strong>Run Demo</strong></a></p>
 <pre>
 	<code>
     $(function() {
@@ -71,6 +71,12 @@
 
 <h3>2.3 Example with a DOM element</h3>
 <p>You can include the entire DOM element as the message of the dialog. <a href="#" class="button"><strong>Run Demo</strong></a></p>
+<div class="hide" id="sample-container-01">
+<div class="dialog-text">
+	<p>Here is an example of how the modal was executed by using the contents of a DOM element.</p>
+    <p>Notice how the styles associated to this element are also applied to the modal window, considering that they were not inherited styles.</p>
+</div>
+</div>
 <pre>
 	<code>
     &lt;div id="sample-container"&gt;
@@ -105,13 +111,26 @@
 function run_example1() {
 	_gaq.push(['_trackEvent', 'Example', 'example1', 'Demo of string based example']);
 	$.appalert({message:'This is a sample message'});	
+}
+function run_example2() {
+	_gaq.push(['_trackEvent', 'Example', 'example2', 'Demo of HTML based example']);
+	$.appalert({message:'<p>This is a <strong>sample message to show the functionality of the modal dialog.</strong></p><p>Check out the additional examples also!</p>'});	
 }		   
 
 $(function() {
 	$('#example1').click(function(e) {
 		e.preventDefault();
 		run_example1();
-	});;
+	});
+	$('#example2').click(function(e) {
+		e.preventDefault();
+		run_example2();
+	});
+	$('#example3').click(function(e) {
+		e.preventDefault();
+		_gaq.push(['_trackEvent', 'Example', 'example3', 'Demo of DOM element based example']);
+		$('#sample-container-01').appalert();
+	});
 });
 </script>    
 <script type="text/javascript">

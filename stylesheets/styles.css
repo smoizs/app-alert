@@ -123,6 +123,8 @@ a.button {
 
 }
 
+.hide { display:none; }
+
 header ul {
   list-style:none;
   height:40px;

@@ -70,7 +70,7 @@
 </pre>
 
 <h3>2.3 Example with a DOM element</h3>
-<p>You can include the entire DOM element as the message of the dialog. <a href="#" class="button"><strong>Run Demo</strong></a></p>
+<p>You can include the entire DOM element as the message of the dialog. <a href="#" id="example3" class="button"><strong>Run Demo</strong></a></p>
 <div class="hide" id="sample-container-01">
 <div class="dialog-text">
 	<p>Here is an example of how the modal was executed by using the contents of a DOM element.</p>
@@ -99,18 +99,18 @@
     
     $(function() {
        	$('#sample-container').appalert({
-        	confirm : true  <span>// converts to a confirm box, adds Ok and Cancel buttons</span>
-            input : true    <span>// converts the modal dialog to a prompt box</span>
-            input_placeholder : 'enter your name' <span>// label for input of prompt</span>
-            animate : true  <span>// add a animated effect of dropping down</span>
-            animateSpeed : 'normal' <span>//normal, fast, slow or a micro second value</span>
-            textOk : 'Ok'   <span>//text for OK button</span>
-            textCancel : 'Cancel' <span>// text for cancel button.</span>
-            overlay : true <span>// add a overlay behind the modal</span>
-            applybuttons : true <span>// allow button, if false, no button and timeout can be used.</span>
-            timeout : 5000 <span>// only applicable if applybuttons is false.</span>
-            width : 0 <span>// 0 = auto, or you can include a pixel value</span>
-            onSuccess : function() {
+        confirm : true  <span>// converts to a confirm box, adds Ok and Cancel buttons</span>
+        input : true    <span>// converts the modal dialog to a prompt box</span>
+        input_placeholder : 'enter your name' <span>// label for input of prompt</span>
+        animate : true  <span>// add a animated effect of dropping down</span>
+        animateSpeed : 'normal' <span>//normal, fast, slow or a micro second value</span>
+        textOk : 'Ok'   <span>//text for OK button</span>
+        textCancel : 'Cancel' <span>// text for cancel button.</span>
+        overlay : true <span>// add a overlay behind the modal</span>
+        applybuttons : true <span>// allow button, if false, no button and timeout can be used.</span>
+        timeout : 5000 <span>// only applicable if applybuttons is false.</span>
+        width : 0 <span>// 0 = auto, or you can include a pixel value</span>
+        onSuccess : function() {
             	<span>
                 // callback function to return TRUE or FALSE
                 // TRUE = ok button was clicked

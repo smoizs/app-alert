@@ -14,6 +14,9 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <script src="//code.jquery.com/jquery-1.7.2.min.js"></script>
+    <style>
+    .dialog-text { font-size:18px; line-height:24px; width:350px; }
+    </style>
   </head>
   <body>
     <div class="wrapper">
@@ -121,6 +124,34 @@
     });
 	</code>
 </pre>
+<h3>3.1 Example with animate:true</h3>
+<p>Use the animate configuration to show the dialog box with neat dropdown animation. <a href="#" id="example4" class="button"><strong>Run Demo</strong></a></p>
+<pre>
+	<code>
+    $(function() {
+       	$.appalert({
+        	'message':'&lt;strong&gt;Sample content for dialog here&lt;/strong&gt;',
+        	animate:true, 
+        	animateSpeed:'fast'
+        });
+    });
+	</code>
+</pre>
+
+<h3>3.2 Example with confirm:true</h3>
+<p>To use the modal dialog as a confirm box with a OK and Cancel button. <a href="#" id="example5" class="button"><strong>Run Demo</strong></a></p>
+<pre>
+	<code>
+    $(function() {
+       	$.appalert({
+        	'message':'Are you sure you want to delete this record',
+        	confirm:true, 
+        	animate:true, 
+        	animateSpeed:'fast'
+        });
+    });
+	</code>
+</pre>
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
@@ -150,7 +181,19 @@ function run_example2() {
 	_gaq.push(['_trackEvent', 'Example', 'example2', 'Demo of HTML based example']);
 	$.appalert({message:'<p>This is a <strong>sample message to show the functionality of the modal dialog.</strong></p><p>Check out the additional examples also!</p>'});	
 }		   
-
+function run_example4() {
+	_gaq.push(['_trackEvent', 'Example', 'example4', 'Demo with animate']);
+   	$.appalert({'message':'<strong>Sample content for dialog here</strong>',animate:true, animateSpeed:'fast'});	
+}
+function run_example5() {
+	_gaq.push(['_trackEvent', 'Example', 'example5', 'Demo with confirm box']);
+	$.appalert({
+		'message':'Are you sure you want to delete this record',
+		confirm:true, 
+		animate:true, 
+		animateSpeed:'normal'
+	});	
+}
 $(function() {
 	$('#example1').click(function(e) {
 		e.preventDefault();
@@ -164,6 +207,14 @@ $(function() {
 		e.preventDefault();
 		_gaq.push(['_trackEvent', 'Example', 'example3', 'Demo of DOM element based example']);
 		$('#sample-container-01').appalert();
+	});
+	$('#example4').click(function(e) {
+		e.preventDefault();
+		run_example4();
+	});
+	$('#example5').click(function(e) {
+		e.preventDefault();
+		run_example5();
 	});
 });
 </script>    
